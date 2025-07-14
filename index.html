@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFuel - 用 AI 讓學習更聰明</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-animation" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="StudyFuel Logo" class="logo" />
+                <span>StudyFuel</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#demo">產品展示</a></li>
+                <li><a href="#features">功能</a></li>
+                <li><a href="#about">關於</a></li>
+                <li><a href="#advanced">進階功能</a></li>
+                <li><a href="#contact">聯絡</a></li>
+            </ul>
+            <a href="#" class="cta-button">開始使用</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>StudyFuel</h1>
+                <p class="hero-tagline">STUDY SMART</p>
+                <p class="hero-description">
+                    用 AI 的力量重新定義學習體驗。從筆記整理、自動出題到進度追蹤，
+                    讓每一分鐘的學習都更有效率、更有成果。為台灣學生量身打造的智慧學習革命。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn-primary">探索功能</a>
+                    <a href="#" class="btn-secondary">免費試用</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="logo-display">
+                    <svg class="logo-main" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Enhanced student head with headphones and glasses -->
+                        <circle cx="100" cy="80" r="40" stroke="#667eea" stroke-width="5" fill="none"/>
+                        <!-- Headphones with gradient -->
+                        <path d="M60 60 Q50 50 45 60 Q45 70 50 75 L50 85 Q50 90 55 90 L65 90" stroke="url(#gradient1)" stroke-width="5" fill="none"/>
+                        <path d="M140 60 Q150 50 155 60 Q155 70 150 75 L150 85 Q150 90 145 90 L135 90" stroke="url(#gradient1)" stroke-width="5" fill="none"/>
+                        <path d="M65 55 Q100 45 135 55" stroke="url(#gradient1)" stroke-width="5" fill="none"/>
+                        <!-- Glasses -->
+                        <circle cx="88" cy="80" r="12" stroke="#2d3436" stroke-width="4" fill="none"/>
+                        <circle cx="112" cy="80" r="12" stroke="#2d3436" stroke-width="4" fill="none"/>
+                        <path d="M100 80 L105 80" stroke="#2d3436" stroke-width="4"/>
+                        <!-- Hair -->
+                        <path d="M70 45 Q80 35 90 40 Q100 30 110 40 Q120 35 130 45" stroke="#2d3436" stroke-width="5" fill="none"/>
+                        <!-- Book with gradient -->
+                        <rect x="70" y="130" width="60" height="40" rx="6" stroke="url(#gradient2)" stroke-width="5" fill="none"/>
+                        <path d="M100 130 L100 170" stroke="#2d3436" stroke-width="3"/>
+                        <path d="M75 140 L95 140 M75 150 L95 150 M75 160 L95 160" stroke="#636e72" stroke-width="2"/>
+                        <path d="M105 140 L125 140 M105 150 L125 150 M105 160 L125 160" stroke="#636e72" stroke-width="2"/>
+                        
+                        <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#667eea"/>
+                                <stop offset="100%" style="stop-color:#764ba2"/>
+                            </linearGradient>
+                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe"/>
+                                <stop offset="100%" style="stop-color:#00f2fe"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="brand-name">STUDYFUEL</div>
+                    <div class="brand-tagline">STUDY SMART</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section section">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <div class="section-number">01 — 產品展示</div>
+                <h2 class="section-title">親自體驗 AI 學習的威力</h2>
+                <p class="section-description">
+                    看看 StudyFuel 如何在幾秒鐘內將您的學習材料轉換為互動式學習體驗
+                </p>
+            </div>
+
+            <div class="demo-container">
+                <div class="demo-tabs">
+                    <button class="demo-tab active" data-tab="notes">📝 智慧筆記</button>
+                    <button class="demo-tab" data-tab="quiz">📊 自動出題</button>
+                    <button class="demo-tab" data-tab="progress">📈 學習分析</button>
+                </div>
+
+                <div class="demo-content">
+                    <!-- Notes Demo -->
+                    <div class="demo-panel active" id="demo-notes">
+                        <div class="demo-split">
+                            <div class="demo-input">
+                                <h3>輸入原始筆記</h3>
+                                <div class="demo-text-area">
+                                    <p><strong>數學 - 微積分基礎</strong></p>
+                                    <p>導數的定義：函數 f(x) 在點 x=a 處的導數定義為 lim(h→0) [f(a+h)-f(a)]/h。</p>
+                                    <p>基本求導法則包括：常數法則、冪法則、乘積法則、商法則和鏈式法則。</p>
+                                    <p>常見函數的導數：sin(x)的導數是cos(x)，cos(x)的導數是-sin(x)，e^x的導數是e^x。</p>
+                                    <p>導數的幾何意義是函數圖像在該點的切線斜率。</p>
+                                </div>
+                            </div>
+                            <div class="demo-arrow">→</div>
+                            <div class="demo-output">
+                                <h3>AI 整理結果</h3>
+                                <div class="demo-result">
+                                    <div class="keyword-section">
+                                        <h4>🔑 關鍵概念</h4>
+                                        <div class="keywords">
+                                            <span class="keyword">導數定義</span>
+                                            <span class="keyword">求導法則</span>
+                                            <span class="keyword">三角函數導數</span>
+                                            <span class="keyword">幾何意義</span>
+                                        </div>
+                                    </div>
+                                    <div class="summary-section">
+                                        <h4>📋 重點摘要</h4>
+                                        <ul>
+                                            <li>導數：極限定義 lim(h→0) [f(a+h)-f(a)]/h</li>
+                                            <li>五大求導法則：常數、冪、乘積、商、鏈式</li>
+                                            <li>三角函數導數：sin→cos, cos→-sin</li>
+                                            <li>幾何意義：切線斜率</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Demo -->
+                    <div class="demo-panel" id="demo-quiz">
+                        <div class="demo-split">
+                            <div class="demo-input">
+                                <h3>基於筆記內容</h3>
+                                <div class="demo-text-area">
+                                    <p><strong>已整理的重點：</strong></p>
+                                    <ul>
+                                        <li>導數定義：lim(h→0) [f(a+h)-f(a)]/h</li>
+                                        <li>五大求導法則：常數、冪、乘積、商、鏈式</li>
+                                        <li>三角函數導數：sin→cos, cos→-sin</li>
+                                        <li>幾何意義：切線斜率</li>
+                                    </ul>
+                                    <div class="quiz-settings">
+                                        <h4>📋 出題設定</h4>
+                                        <div class="setting-item">
+                                            <label>題型：</label>
+                                            <select class="demo-select">
+                                                <option>選擇題</option>
+                                                <option>填空題</option>
+                                                <option>是非題</option>
+                                                <option>簡答題</option>
+                                            </select>
+                                        </div>
+                                        <div class="setting-item">
+                                            <label>難度：</label>
+                                            <div class="difficulty-buttons">
+                                                <button class="diff-btn">基礎</button>
+                                                <button class="diff-btn active">中等</button>
+                                                <button class="diff-btn">進階</button>
+                                            </div>
+                                        </div>
+                                        <div class="setting-item">
+                                            <label>題數：</label>
+                                            <input type="range" class="demo-slider" min="3" max="20" value="10">
+                                            <span class="slider-value">10 題</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-arrow">→</div>
+                            <div class="demo-output">
+                                <h3>AI 即時生成題目</h3>
+                                <div class="demo-result">
+                                    <div class="quiz-header">
+                                        <div class="quiz-progress-bar">
+                                            <div class="quiz-progress-fill" style="width: 30%"></div>
+                                        </div>
+                                        <div class="quiz-info">
+                                            <span class="current-question">問題 3/10</span>
+                                            <span class="time-remaining">⏱️ 02:45</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="quiz-question">
+                                        <p class="question-text"><strong>sin(x) 的導數是什麼？</strong></p>
+                                        <div class="quiz-options">
+                                            <label class="quiz-option">
+                                                <input type="radio" name="q1" value="a">
+                                                <span>A. -cos(x)</span>
+                                            </label>
+                                            <label class="quiz-option correct">
+                                                <input type="radio" name="q1" value="b" checked>
+                                                <span>B. cos(x) ✓</span>
+                                            </label>
+                                            <label class="quiz-option">
+                                                <input type="radio" name="q1" value="c">
+                                                <span>C. sin(x)</span>
+                                            </label>
+                                            <label class="quiz-option">
+                                                <input type="radio" name="q1" value="d">
+                                                <span>D. -sin(x)</span>
+                                            </label>
+                                        </div>
+                                        
+                                        <div class="quiz-explanation">
+                                            <div class="explanation-header">
+                                                <span class="explanation-icon">💡</span>
+                                                <strong>AI 詳解</strong>
+                                            </div>
+                                            <p>根據三角函數求導公式，sin(x) 的導數是 cos(x)。這是微積分中的基本公式之一。</p>
+                                            <div class="explanation-note">
+                                                <p><strong>記憶技巧：</strong> sin 變 cos，cos 變 -sin，循環記憶法！</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="quiz-actions">
+                                            <button class="quiz-btn secondary">◀ 上一題</button>
+                                            <button class="quiz-btn primary">下一題 ▶</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="quiz-sidebar">
+                                        <div class="score-display">
+                                            <div class="score-circle">
+                                                <span class="score-number">85%</span>
+                                                <span class="score-label">目前正確率</span>
+                                            </div>
+                                        </div>
+                                        <div class="question-navigator">
+                                            <h4>題目導覽</h4>
+                                            <div class="question-grid">
+                                                <span class="q-nav correct">1</span>
+                                                <span class="q-nav correct">2</span>
+                                                <span class="q-nav current">3</span>
+                                                <span class="q-nav">4</span>
+                                                <span class="q-nav">5</span>
+                                                <span class="q-nav">6</span>
+                                                <span class="q-nav">7</span>
+                                                <span class="q-nav">8</span>
+                                                <span class="q-nav">9</span>
+                                                <span class="q-nav">10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Demo -->
+                    <div class="demo-panel" id="demo-progress">
+                        <div class="demo-dashboard">
+                            <div class="dashboard-header">
+                                <h3>📊 個人學習分析儀表板</h3>
+                                <div class="date-selector">
+                                    <select class="demo-select">
+                                        <option>本週</option>
+                                        <option>本月</option>
+                                        <option>本學期</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">📚</div>
+                                    <div class="stat-info">
+                                        <div class="stat-number">127</div>
+                                        <div class="stat-label">已整理筆記</div>
+                                        <div class="stat-trend">+12 本週</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">🎯</div>
+                                    <div class="stat-info">
+                                        <div class="stat-number">85%</div>
+                                        <div class="stat-label">平均正確率</div>
+                                        <div class="stat-trend">+5% 提升</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">⏰</div>
+                                    <div class="stat-info">
+                                        <div class="stat-number">2.5h</div>
+                                        <div class="stat-label">今日學習時間</div>
+                                        <div class="stat-trend">目標：3h</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">🏆</div>
+                                    <div class="stat-info">
+                                        <div class="stat-number">12</div>
+                                        <div class="stat-label">連續學習天數</div>
+                                        <div class="stat-trend">新紀錄！</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="analytics-grid">
+                                <div class="analytics-card">
+                                    <h4>📈 學習進度趨勢</h4>
+                                    <div class="chart-placeholder">
+                                        <div class="chart-bars">
+                                            <div class="chart-bar" style="height: 60%">
+                                                <span class="bar-label">週一</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 75%">
+                                                <span class="bar-label">週二</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 45%">
+                                                <span class="bar-label">週三</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 90%">
+                                                <span class="bar-label">週四</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 85%">
+                                                <span class="bar-label">週五</span>
+                                            </div>
+                                            <div class="chart-bar" style="height: 70%">
+                                                <span class="bar-label">週六</span>
+                                            </div>
+                                            <div class="chart-bar active" style="height: 95%">
+                                                <span class="bar-label">今天</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="analytics-card">
+                                    <h4>🎯 科目掌握度雷達圖</h4>
+                                    <div class="radar-chart">
+                                        <div class="radar-center">
+                                            <span class="overall-score">82%</span>
+                                            <span class="overall-label">整體掌握度</span>
+                                        </div>
+                                        <div class="radar-axes">
+                                            <div class="radar-axis" style="--angle: 0deg; --percentage: 92%">
+                                                <span class="axis-label">數學 92%</span>
+                                            </div>
+                                            <div class="radar-axis" style="--angle: 72deg; --percentage: 78%">
+                                                <span class="axis-label">物理 78%</span>
+                                            </div>
+                                            <div class="radar-axis" style="--angle: 144deg; --percentage: 85%">
+                                                <span class="axis-label">化學 85%</span>
+                                            </div>
+                                            <div class="radar-axis" style="--angle: 216deg; --percentage: 71%">
+                                                <span class="axis-label">英文 71%</span>
+                                            </div>
+                                            <div class="radar-axis" style="--angle: 288deg; --percentage: 88%">
+                                                <span class="axis-label">國文 88%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="insights-section">
+                                <h4>🧠 AI 學習洞察</h4>
+                                <div class="insights-grid">
+                                    <div class="insight-card strength">
+                                        <div class="insight-icon">💪</div>
+                                        <div class="insight-content">
+                                            <h5>優勢科目</h5>
+                                            <p>數學表現優異，連續 7 天正確率超過 90%</p>
+                                        </div>
+                                    </div>
+                                    <div class="insight-card improvement">
+                                        <div class="insight-icon">📚</div>
+                                        <div class="insight-content">
+                                            <h5>建議加強</h5>
+                                            <p>英文閱讀理解需要更多練習，建議增加 20 分鐘</p>
+                                        </div>
+                                    </div>
+                                    <div class="insight-card goal">
+                                        <div class="insight-icon">🎯</div>
+                                        <div class="insight-content">
+                                            <h5>下週目標</h5>
+                                            <p>完成 15 篇筆記整理，維持 85% 以上正確率</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-cta">
+                    <button class="btn-demo-primary">🚀 免費試用 StudyFuel</button>
+                    <button class="btn-demo-secondary">📖 查看更多功能</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Phones Section -->
+    <section class="floating-phones-section section">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <div class="section-number">02 — 移動體驗</div>
+                <h2 class="section-title">隨時隨地的智慧學習</h2>
+                <p class="section-description">
+                    無論在家、在校、還是通勤途中，StudyFuel 讓學習變得無縫且高效
+                </p>
+            </div>
+        </div>
+        <div class="phones-container">
+            <div class="phone-mockup phone-1" data-speed="0.5">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="app-interface notes-app">
+                            <div class="app-header">
+                                <span class="app-title">📝 智慧筆記</span>
+                                <div class="status-bar">
+                                    <span>9:41</span>
+                                    <div class="signal-icons">
+                                        <div class="signal-bar"></div>
+                                        <div class="signal-bar"></div>
+                                        <div class="signal-bar"></div>
+                                        <div class="battery">100%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="app-content">
+                                <div class="note-item">
+                                    <h4>數學 - 微積分重點</h4>
+                                    <p>AI 整理完成 ✨</p>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="note-item">
+                                    <h4>英文 - 單字整理</h4>
+                                    <p>關鍵詞已萃取</p>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="ai-suggestion">
+                                    <span class="ai-icon">🤖</span>
+                                    <span>AI 建議：增加練習題</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-mockup phone-2" data-speed="0.8">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="app-interface quiz-app">
+                            <div class="app-header">
+                                <span class="app-title">📊 智慧測驗</span>
+                                <div class="quiz-timer">⏱️ 15:32</div>
+                            </div>
+                            <div class="app-content">
+                                <div class="question-counter">問題 3/10</div>
+                                <div class="question-text">
+                                    下列何者為微積分的基本定理？
+                                </div>
+                                <div class="quiz-options">
+                                    <div class="option">A. 牛頓定律</div>
+                                    <div class="option selected">B. 基本定理</div>
+                                    <div class="option">C. 黃金比例</div>
+                                    <div class="option">D. 畢氏定理</div>
+                                </div>
+                                <div class="quiz-progress">
+                                    <div class="progress-circle">
+                                        <span>70%</span>
+                                    </div>
+                                    <span>準確率</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-mockup phone-3" data-speed="0.3">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="app-interface progress-app">
+                            <div class="app-header">
+                                <span class="app-title">📈 學習進度</span>
+                                <div class="date">11月 21日</div>
+                            </div>
+                            <div class="app-content">
+                                <div class="stats-grid-mobile">
+                                    <div class="stat-mobile">
+                                        <span class="stat-number">85</span>
+                                        <span class="stat-label">今日學習分鐘</span>
+                                    </div>
+                                    <div class="stat-mobile">
+                                        <span class="stat-number">12</span>
+                                        <span class="stat-label">完成題目</span>
+                                    </div>
+                                </div>
+                                <div class="subject-progress">
+                                    <div class="subject-item">
+                                        <span>數學</span>
+                                        <div class="subject-bar">
+                                            <div class="subject-fill" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span>英文</span>
+                                        <div class="subject-bar">
+                                            <div class="subject-fill" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="subject-item">
+                                        <span>國文</span>
+                                        <div class="subject-bar">
+                                            <div class="subject-fill" style="width: 68%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="achievement">
+                                    🏆 連續學習 7 天！
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <div class="section-number">03 — 核心功能</div>
+                <h2 class="section-title">AI 驅動的學習體驗</h2>
+                <p class="section-description">
+                    整合最先進的人工智慧技術，為台灣學生量身打造的智慧學習平台，
+                    讓每一次學習都更精準、更高效、更有成果
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">🗂️</span>
+                    <h3 class="feature-title">智慧筆記整理</h3>
+                    <p class="feature-description">AI 協助整理課堂筆記，快速掌握重點，讓複習更有效率。</p>
+                    <div class="feature-details">
+                        <div class="feature-inputs">
+                            <h4>多元輸入方式：</h4>
+                            <ul class="feature-list">
+                                <li>支援多種格式檔案 (.txt, .pdf, .docx, .pptx, .md)</li>
+                                <li>直接貼上課堂筆記內容</li>
+                                <li>智慧學科分類識別</li>
+                                <li>彈性摘要模式選擇</li>
+                            </ul>
+                        </div>
+                        <div class="feature-outputs">
+                            <h4>AI 智慧產出：</h4>
+                            <ul class="feature-list">
+                                <li>精準關鍵詞萃取</li>
+                                <li>結構化段落摘要</li>
+                                <li>視覺化重點整理</li>
+                                <li>圖表建議與優化</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">📄</span>
+                    <h3 class="feature-title">智慧自動出題</h3>
+                    <p class="feature-description">從筆記中自動生成個人化考題，反覆練習讓學習更紮實。</p>
+                    <div class="feature-details">
+                        <div class="feature-inputs">
+                            <h4>靈活出題設定：</h4>
+                            <ul class="feature-list">
+                                <li>多題型選擇：選擇、填空、是非、簡答</li>
+                                <li>三段式難易度調整</li>
+                                <li>彈性題數設定 (3-50 題)</li>
+                                <li>多語言支援：中文、英文、雙語模式</li>
+                            </ul>
+                        </div>
+                        <div class="feature-outputs">
+                            <h4>互動學習體驗：</h4>
+                            <ul class="feature-list">
+                                <li>即時智慧題目生成</li>
+                                <li>沉浸式互動測驗</li>
+                                <li>AI 自動批改與詳解</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in-up">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">學習進度追蹤</h3>
+                    <p class="feature-description">全方位追蹤學習軌跡，科學化分析弱點，持續優化學習策略。</p>
+                    <div class="feature-details">
+                        <div class="feature-inputs">
+                            <h4>個人化追蹤：</h4>
+                            <ul class="feature-list">
+                                <li>自訂時間區間深度分析</li>
+                                <li>自動整合測驗歷史紀錄</li>
+                                <li>個人學習目標設定</li>
+                                <li>智慧提醒與激勵系統</li>
+                            </ul>
+                        </div>
+                        <div class="feature-outputs">
+                            <h4>視覺化分析報告：</h4>
+                            <ul class="feature-list">
+                                <li>動態學習熱力圖</li>
+                                <li>科目掌握度雷達圖</li>
+                                <li>錯題模式分析與建議</li>
+                                <li>學習效率時間序列分析</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+             <div class="section-content">
+                <div class="floating-content">
+                    <div class="content-block">
+                        <h2>體驗未來的學習方式</h2>
+                        <p>StudyFuel 將複雜的學習過程簡化為直觀的移動體驗，讓你隨時隨地都能高效學習。</p>
+                    </div>
+                    <div class="content-block">
+                        <h2>智慧化的個人助教</h2>
+                        <p>AI 深度分析你的學習模式，提供個人化建議，就像擁有專屬的學習顧問。</p>
+                    </div>
+                    <div class="content-block">
+                        <h2>數據驅動的成長</h2>
+                        <p>詳細的學習分析幫助你了解進步軌跡，讓每一步學習都更有方向感。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="portfolio-gallery-section section">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <div class="section-number">04 — 學習場景</div>
+                <h2 class="section-title">各種學習情境，一個平台搞定</h2>
+                <p class="section-description">
+                    從高中到大學，從考試準備到技能提升，StudyFuel 適應每一種學習需求
+                </p>
+            </div>
+            
+            <div class="dev-screens-wrapper">
+                <div class="dev-screens">
+                    <!-- First row of screens -->
+                    <ul class="screens-list">
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen notes-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag math">數學</span>
+                                        <span class="time">14:32</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>微積分重點整理</h3>
+                                        <div class="note-preview">
+                                            <div class="note-line">• 導數的定義與性質</div>
+                                            <div class="note-line">• 基本積分公式</div>
+                                            <div class="note-line">• 應用題解法策略</div>
+                                        </div>
+                                        <div class="ai-badge">🤖 AI 已整理完成</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-logo">
+                                <span>📚 筆記</span>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen quiz-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag english">英文</span>
+                                        <span class="timer">⏱️ 05:47</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <div class="question-number">第 3/10 題</div>
+                                        <h3>Choose the correct answer:</h3>
+                                        <div class="options">
+                                            <div class="option">A. However</div>
+                                            <div class="option selected">B. Therefore</div>
+                                            <div class="option">C. Although</div>
+                                        </div>
+                                        <div class="score">正確率: 85%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item empty-screen"></li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen progress-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag science">自然</span>
+                                        <span class="date">11/21</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>本週學習進度</h3>
+                                        <div class="progress-bars">
+                                            <div class="progress-item">
+                                                <span>物理</span>
+                                                <div class="bar"><div class="fill" style="width: 92%"></div></div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <span>化學</span>
+                                                <div class="bar"><div class="fill" style="width: 78%"></div></div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <span>生物</span>
+                                                <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen vocabulary-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag english">單字卡</span>
+                                        <span class="count">126/200</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <div class="flashcard">
+                                            <div class="word">Perseverance</div>
+                                            <div class="pronunciation">/ˌpɜːrsəˈvɪrəns/</div>
+                                            <div class="definition">堅持不懈，毅力</div>
+                                            <div class="example">"Success requires perseverance."</div>
+                                        </div>
+                                        <div class="card-actions">
+                                            <button class="know-btn">認識</button>
+                                            <button class="unknown-btn">不認識</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Duplicate items for infinite scroll -->
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen notes-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag math">數學</span>
+                                        <span class="time">14:32</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>微積分重點整理</h3>
+                                        <div class="note-preview">
+                                            <div class="note-line">• 導數的定義與性質</div>
+                                            <div class="note-line">• 基本積分公式</div>
+                                            <div class="note-line">• 應用題解法策略</div>
+                                        </div>
+                                        <div class="ai-badge">🤖 AI 已整理完成</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-logo">
+                                <span>📚 筆記</span>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen quiz-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag english">英文</span>
+                                        <span class="timer">⏱️ 05:47</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <div class="question-number">第 3/10 題</div>
+                                        <h3>Choose the correct answer:</h3>
+                                        <div class="options">
+                                            <div class="option">A. However</div>
+                                            <div class="option selected">B. Therefore</div>
+                                            <div class="option">C. Although</div>
+                                        </div>
+                                        <div class="score">正確率: 85%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item empty-screen"></li>
+                    </ul>
+                    
+                    <!-- Second row of screens -->
+                    <ul class="screens-list">
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen chinese-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag chinese">國文</span>
+                                        <span class="time">16:20</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>古詩詞賞析</h3>
+                                        <div class="poem-content">
+                                            <p>"春花秋月何時了，往事知多少"</p>
+                                            <div class="analysis">
+                                                <span class="highlight">修辭技法：</span>設問
+                                            </div>
+                                            <div class="analysis">
+                                                <span class="highlight">情感表達：</span>懷古傷今
+                                            </div>
+                                        </div>
+                                        <div class="ai-insight">💡 AI 解析已生成</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen social-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag social">社會</span>
+                                        <span class="chapter">第三章</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>台灣地理特色</h3>
+                                        <div class="geography-points">
+                                            <div class="geo-item">🏔️ 中央山脈</div>
+                                            <div class="geo-item">🌊 海岸線特徵</div>
+                                            <div class="geo-item">🌡️ 氣候型態</div>
+                                        </div>
+                                        <div class="memory-tip">
+                                            <span class="tip-icon">💭</span>
+                                            <span>記憶口訣：中海氣候好記憶</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-logo">
+                                <span>🗺️ 地理</span>
+                            </div>
+                        </li>
+                        <li class="screens-item empty-screen"></li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen exam-prep-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag exam">學測準備</span>
+                                        <span class="countdown">D-45</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>今日任務</h3>
+                                        <div class="task-list">
+                                            <div class="task completed">✅ 數學模擬題 1 回</div>
+                                            <div class="task completed">✅ 英文閱讀 2 篇</div>
+                                            <div class="task pending">⏳ 國文古文 3 篇</div>
+                                            <div class="task pending">📝 社會複習</div>
+                                        </div>
+                                        <div class="completion-rate">完成度: 50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen analytics-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag analytics">學習分析</span>
+                                        <span class="period">本月</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>學習統計</h3>
+                                        <div class="stats-grid">
+                                            <div class="stat-box">
+                                                <div class="stat-number">127</div>
+                                                <div class="stat-label">學習時數</div>
+                                            </div>
+                                            <div class="stat-box">
+                                                <div class="stat-number">89%</div>
+                                                <div class="stat-label">目標達成</div>
+                                            </div>
+                                        </div>
+                                        <div class="trend-indicator">📈 比上月提升 12%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Duplicate items for infinite scroll -->
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen chinese-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag chinese">國文</span>
+                                        <span class="time">16:20</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>古詩詞賞析</h3>
+                                        <div class="poem-content">
+                                            <p>"春花秋月何時了，往事知多少"</p>
+                                            <div class="analysis">
+                                                <span class="highlight">修辭技法：</span>設問
+                                            </div>
+                                            <div class="analysis">
+                                                <span class="highlight">情感表達：</span>懷古傷今
+                                            </div>
+                                        </div>
+                                        <div class="ai-insight">💡 AI 解析已生成</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen social-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag social">社會</span>
+                                        <span class="chapter">第三章</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>台灣地理特色</h3>
+                                        <div class="geography-points">
+                                            <div class="geo-item">🏔️ 中央山脈</div>
+                                            <div class="geo-item">🌊 海岸線特徵</div>
+                                            <div class="geo-item">🌡️ 氣候型態</div>
+                                        </div>
+                                        <div class="memory-tip">
+                                            <span class="tip-icon">💭</span>
+                                            <span>記憶口訣：中海氣候好記憶</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-logo">
+                                <span>🗺️ 地理</span>
+                            </div>
+                        </li>
+                        <li class="screens-item empty-screen"></li>
+                    </ul>
+                    
+                    <!-- Third row of screens -->
+                    <ul class="screens-list">
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen voice-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag audio">語音學習</span>
+                                        <span class="status">播放中</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>AI 朗讀筆記</h3>
+                                        <div class="audio-player">
+                                            <div class="wave-animation">
+                                                <div class="wave"></div>
+                                                <div class="wave"></div>
+                                                <div class="wave"></div>
+                                                <div class="wave"></div>
+                                            </div>
+                                            <div class="audio-info">
+                                                <p>正在播放：歷史重點整理</p>
+                                                <div class="progress-time">02:35 / 08:42</div>
+                                            </div>
+                                        </div>
+                                        <div class="playback-speed">播放速度: 1.2x</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen collaboration-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag group">小組學習</span>
+                                        <span class="online-count">3 人在線</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>數學讀書會</h3>
+                                        <div class="group-members">
+                                            <div class="member">👨‍🎓 小明</div>
+                                            <div class="member">👩‍🎓 小華</div>
+                                            <div class="member me">👤 我</div>
+                                        </div>
+                                        <div class="recent-message">
+                                            <span class="msg-author">小明:</span>
+                                            <span class="msg-text">這題微分怎麼解？</span>
+                                        </div>
+                                        <div class="typing-indicator">小華 正在輸入...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-logo">
+                                <span>👥 協作</span>
+                            </div>
+                        </li>
+                        <li class="screens-item empty-screen"></li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen schedule-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag schedule">學習計畫</span>
+                                        <span class="today">今天</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>個人時間表</h3>
+                                        <div class="schedule-items">
+                                            <div class="schedule-item">
+                                                <span class="time">09:00</span>
+                                                <span class="subject math">數學複習</span>
+                                            </div>
+                                            <div class="schedule-item">
+                                                <span class="time">11:00</span>
+                                                <span class="subject english">英文聽力</span>
+                                            </div>
+                                            <div class="schedule-item active">
+                                                <span class="time">14:00</span>
+                                                <span class="subject science">物理實驗</span>
+                                            </div>
+                                        </div>
+                                        <div class="next-reminder">下一個提醒: 15分鐘後</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen achievement-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag achievement">成就</span>
+                                        <span class="level">Lv.15</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>學習里程碑</h3>
+                                        <div class="achievement-list">
+                                            <div class="achievement earned">🏆 連續學習 30 天</div>
+                                            <div class="achievement earned">⭐ 數學高手</div>
+                                            <div class="achievement earned">📚 筆記達人</div>
+                                        </div>
+                                        <div class="next-goal">
+                                            <span>距離下一個成就:</span>
+                                            <div class="goal-progress">
+                                                <div class="goal-bar">
+                                                    <div class="goal-fill" style="width: 75%"></div>
+                                                </div>
+                                                <span class="goal-text">15/20 個完美答題</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Duplicate items for infinite scroll -->
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen voice-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag audio">語音學習</span>
+                                        <span class="status">播放中</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>AI 朗讀筆記</h3>
+                                        <div class="audio-player">
+                                            <div class="wave-animation">
+                                                <div class="wave"></div>
+                                                <div class="wave"></div>
+                                                <div class="wave"></div>
+                                                <div class="wave"></div>
+                                            </div>
+                                            <div class="audio-info">
+                                                <p>正在播放：歷史重點整理</p>
+                                                <div class="progress-time">02:35 / 08:42</div>
+                                            </div>
+                                        </div>
+                                        <div class="playback-speed">播放速度: 1.2x</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="screens-item">
+                            <div class="screen-media">
+                                <div class="study-screen collaboration-screen">
+                                    <div class="screen-header">
+                                        <span class="subject-tag group">小組學習</span>
+                                        <span class="online-count">3 人在線</span>
+                                    </div>
+                                    <div class="screen-content">
+                                        <h3>數學讀書會</h3>
+                                        <div class="group-members">
+                                            <div class="member">👨‍🎓 小明</div>
+                                            <div class="member">👩‍🎓 小華</div>
+                                            <div class="member me">👤 我</div>
+                                        </div>
+                                        <div class="recent-message">
+                                            <span class="msg-author">小明:</span>
+                                            <span class="msg-text">這題微分怎麼解？</span>
+                                        </div>
+                                        <div class="typing-indicator">小華 正在輸入...</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-logo">
+                                <span>👥 協作</span>
+                            </div>
+                        </li>
+                        <li class="screens-item empty-screen"></li>
+                    </ul>
+                </div>
+                
+                <!-- Floating Hand with Phone -->
+                <div class="dev-hand-wrapper">
+                    <div class="dev-hand">
+                        <div class="hand-image">✋</div>
+                        <div class="phone-video">
+                            <div class="video-phone">
+                                <div class="phone-screen-video">
+                                    <div class="video-content">
+                                        <div class="app-switching">
+                                            <div class="app-icon notes">📝</div>
+                                            <div class="app-icon quiz">📊</div>
+                                            <div class="app-icon progress">📈</div>
+                                        </div>
+                                        <div class="swipe-indicator">← 滑動切換應用 →</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section section">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <div class="section-number">05 — 學習成效</div>
+                <h2 class="section-title">數據說話的學習成果</h2>
+                <p class="section-description">
+                    真實數據證明 StudyFuel 的卓越效果，讓學習更科學、更高效
+                </p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item fade-in-up">
+                    <h3>85%</h3>
+                    <p>學習效率提升</p>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <h3>15,000+</h3>
+                    <p>台灣學生使用</p>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <h3>500萬+</h3>
+                    <p>筆記智慧處理</p>
+                </div>
+                <div class="stat-item fade-in-up">
+                    <h3>96%</h3>
+                    <p>使用者滿意度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features Section -->
+    <section id="advanced" class="section advanced-features">
+        <div class="section-container">
+            <div class="section-header fade-in-up">
+                <div class="section-number">06 — 進階功能</div>
+                <h2 class="section-title">🛠️ 增強學習效率的 AI 輔助工具</h2>
+                <p class="section-description">
+                    更多創新功能，讓學習體驗更加完整和個人化，打造屬於你的學習生態系統
+                </p>
+            </div>
+            <div class="subfeatures-grid">
+                <div class="subfeature-card fade-in-up">
+                    <h4 class="subfeature-title">🔖 智慧抽認卡產生器</h4>
+                    <div class="subfeature-flow">
+                        <span>筆記段落/詞彙</span>
+                        <span class="flow-arrow">→</span>
+                        <span>AI 生成雙面卡片</span>
+                        <span class="flow-arrow">→</span>
+                        <span>Quizlet 一鍵匯出</span>
+                    </div>
+                </div>
+                <div class="subfeature-card fade-in-up">
+                    <h4 class="subfeature-title">🎧 AI 語音學習助手</h4>
+                    <div class="subfeature-flow">
+                        <span>上傳學習資料</span>
+                        <span class="flow-arrow">→</span>
+                        <span>AI 合成專業語音</span>
+                        <span class="flow-arrow">→</span>
+                        <span>Podcast 重點朗讀</span>
+                    </div>
+                </div>
+                <div class="subfeature-card fade-in-up">
+                    <h4 class="subfeature-title">🧠 個人化學習計畫</h4>
+                    <div class="subfeature-flow">
+                        <span>學科+目標+時程</span>
+                        <span class="flow-arrow">→</span>
+                        <span>AI 規劃學習路徑</span>
+                        <span class="flow-arrow">→</span>
+                        <span>每日智慧提醒</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">StudyFuel</div>
+            <p class="footer-tagline">用 AI 讓學習更聰明，為台灣學生打造的智慧學習平台</p>
+            <div class="footer-links">
+                <a href="#">功能介紹</a>
+                <a href="#">使用教學</a>
+                <a href="#">價格方案</a>
+                <a href="#">隱私政策</a>
+                <a href="#">服務條款</a>
+                <a href="#">聯絡我們</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudyFuel. 保留所有權利。專為台灣學生設計。</p>
+            </div>
+        </div>
+    </footer>
+    
+  <script src="./js/script.js"></script>
+</body>
+</html>
+                
