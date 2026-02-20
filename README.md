@@ -9,3 +9,4 @@ User accounts and progress persistence
 Tech stack
 HTML CSS JavaScript
 Live demo
+https://jwuuuu.github.io/StudyFuel/
